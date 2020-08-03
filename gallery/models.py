@@ -30,6 +30,13 @@ class Image(models.Model):
         images = cls.objects.filter(categories__name__contains = search_term)
         return images
 
+    @classmethod
+    def filter_by_location(cls,search_term):
+        location = Location.objects.get(name = search_term)
+        images = cls.objects.filter(location = location)
+        return images
+        
+
 
 class Location(models.Model):
     location = models.CharField(max_length=30)

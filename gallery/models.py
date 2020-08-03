@@ -12,9 +12,13 @@ class Image(models.Model):
     def __str__(self):
         return self.image_name
 
-    @classmethod
+    
     def save_image(self):
         self.save()
+
+    
+    def delete_image(self):
+        self.delete()
 
 
 class Location(models.Model):

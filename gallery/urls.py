@@ -4,12 +4,12 @@ from . import views
 from django.contrib import admin
 from django.conf.urls.static import static
 
-from . import views
+
 
 urlpatterns = [
-    url(r'^$', views.my_photos, name = 'my-photos'),
-    url(r'^images/(\d+)', views.my_photo,'my-photo'),
-    url(r'^search/', views.search_results,name='results')
+    url(r'^', views.my_photos, name = 'my-photos'),
+    url(r'^images/(\d+)', views.my_photo,name='my-photo'),
+    url(r'^search/', views.search_results,name='results'),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

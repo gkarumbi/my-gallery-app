@@ -17,7 +17,7 @@ def my_photo(request, photo_id):
 
 
 def search_results(request):
-    if 'photos' in request.GET and request.GET['photos']
+    if 'photos' in request.GET and request.GET['photos']:
         search_term = request.GET.get('photos')
         searched_photo = Image.search_by_category(search_term)
         message = f'{search_term}'

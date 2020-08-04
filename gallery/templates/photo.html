@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<script>
+    function copyToClipBoard() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        document.execCommand("Copy");
+        
+    }
+</script>
+
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="{{image.image.url}}" alt="" uk-cover>
+        <canvas width="900" height="500"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body uk-card-secondary">
+            <div class="uk-text-center uk-card-body uk-text-large ">
+                <h3 class="uk-card-title" >{{image.name|upper}}</h3>
+                <p>{{image.time_uloaded}}/{{image.location}}</p>
+                <hr>
+                <p >{{image.descripton}}</p>
+                <hr>
+
+                <input class="form-control" type="text" value="{{image.image}}" id="myInput">
+                <a onclick="copyToClipBoard()" class="uk-button uk-button-primary">Copy Link</a>
+                <hr>
+                <p>{{image.categories.}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

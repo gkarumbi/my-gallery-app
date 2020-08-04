@@ -1,1 +1,28 @@
-<h1>Welcome to our app</h1>
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="container">
+
+
+<div class="uk-section uk-section-default">
+    <div class="uk-container uk-container-expand">
+        <div class="uk-child-width-1-4@s uk-grid-match .uk-margin-auto" uk-grid>
+            {% for image_item in photos %}
+            <a href="{% url 'my-photo' image_item.id %}">
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <img src="{{ image_item.image.url }}" class="img-responsive">
+                    <div class="uk-text-center uk-card-body uk-text-large ">
+                        <p style="font-family: 'Permanent Marker', cursive;">{{image_item.image_name}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+        </div>
+    </div>
+</div>
+    
+</div>
+
+{% endblock %}

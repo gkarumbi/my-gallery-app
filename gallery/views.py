@@ -9,3 +9,10 @@ def my_photos(request):
     photos = Image.objects.all()
 
     return render(request,'welcome.html',{'photos':photos})
+
+def my_photo(request, photo_id):
+    photo = Image.objects.get(id=photo_id)
+
+    return render(request,'photo.html',{'photo':photo})
+
+

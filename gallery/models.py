@@ -65,3 +65,6 @@ class Category(models.Model):
 
     def update_category(self):
         self.update()
+
+    def delete_category(self):
+        self.delete()

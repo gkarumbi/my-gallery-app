@@ -49,6 +49,9 @@ class Location(models.Model):
 
     def delete_location(self):
         self.delete()
+    
+    def update_location(self):
+        self.update()
 
 
 class Category(models.Model):

@@ -62,3 +62,6 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+    def update_category(self):
+        self.update()

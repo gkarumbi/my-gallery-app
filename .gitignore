@@ -1,3 +1,4 @@
 virtual/
 *.pyc
 my_gallery/settings.py
+.env

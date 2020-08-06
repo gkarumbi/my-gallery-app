@@ -11,22 +11,22 @@
     }
 </script>
 
-<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" >
-    <div class="uk-card-media-left uk-cover-container">
-        <img src="{{photo.image.url}}" alt="" uk-cover>
+<div class="card-panel" >
+    <div class="media- card">
+        <img src="{{photo.image.url}}" alt="" cover>
         <canvas width="900" height="500"></canvas>
     </div>
     <div>
-        <div class="uk-card-body uk-card-secondary">
-            <div class="uk-text-center uk-card-body uk-text-large ">
-                <h3 class="uk-card-title" >{{photo.image_name|upper}}</h3>
+        <div class="card-body card-secondary">
+            <div class="text-center card-body text-large ">
+                <h3 class="card-title" >{{photo.image_name|upper}}</h3>
                
                 <hr>
                 <p >{{photo.image_descripton}}</p>
                 <hr>
 
                 <input class="form-control" type="text" value="{{photoimage}}" id="myInput">
-                <a onclick="copyToClipBoard()" class="uk-button uk-button-primary">Copy Link</a>
+                <a onclick="copyToClipBoard()" class="button button-primary">Copy Link</a>
                 <hr>
                 
             </div>
